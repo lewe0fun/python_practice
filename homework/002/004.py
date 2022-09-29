@@ -13,7 +13,7 @@ while True:
     print('Введите значения от 1 по ', length)
     pos1=int(input('Позиция 1: '))
     pos2=int(input('Позиция 2: '))
-    if (1<pos1<length+1) or (1<pos2<length+1):
+    if (0<pos1<length+1) and (0<pos2<length+1):
         break
 numbers=[0]*length
 for i in range(length):
