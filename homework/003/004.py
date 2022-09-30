@@ -19,12 +19,13 @@ def getRandomFracList(size):
 
 def minMaxDiffValueInList(List):
     minf=List[0]-List[0]//1
-    maxf=List[0]-List[0]//1
+    maxf=minf
     for i in range(len(List)):
-        if (List[i]-List[i]//1)>maxf:
-            maxf=List[i]-List[i]//1
-        if (List[i]-List[i]//1)<minf:
-            minf=List[i]-List[i]//1
+        fract=List[i]-List[i]//1
+        if fract>maxf:
+            maxf=fract
+        if fract<minf:
+            minf=fract
     print('Min: ',round(minf,2),' Max: ',round(maxf,2),end=' ')
     return round(maxf-minf,2)
 
