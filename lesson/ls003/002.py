@@ -19,6 +19,5 @@ def findIndex(word,words):
         print(-1)
 
 words=getRandomList(10,"xyz")
-findIndex(input(), words)
 print(words)
-
+findIndex(input(), words)
