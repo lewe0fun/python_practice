@@ -18,9 +18,10 @@ def negaFibonacci(n):
     if n==-1:
         return -n
     if n<0:
-        return round(negaFibonacci (abs(n))*-1**(n+1))
+        return round(negaFibonacci (abs(n))*(-1)**(n+1))
     else:
         return negaFibonacci(n-1)+negaFibonacci(n-2)
 
-for i in range(-10,10):
-    print(negaFibonacci(i),end=',')
+n=int(input('Задайте число: '))
+for i in range(-n,n+1):
+    print(negaFibonacci(i),end=' ')
