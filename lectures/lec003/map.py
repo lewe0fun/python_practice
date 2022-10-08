@@ -12,3 +12,4 @@
 data=[x for x in range(10)]
 res=list(filter(lambda i: i%2, data))
 print(res)
+print(list(filter(lambda i: i%2==0, range(10))))
