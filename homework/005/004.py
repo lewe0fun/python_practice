@@ -42,7 +42,7 @@ def botMove(count,min,max):
     print('Ход игрока № 2, конфет на столе:',count,',игрока № 2 берет ',candies,' конф.')
     return candies
 
-count=100
+count=2021
 min=1
 max=28
 bot=isBot()
