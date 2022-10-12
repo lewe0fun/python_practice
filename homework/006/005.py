@@ -14,3 +14,29 @@
 # 10 False
 
 # ['автомобиль ночью мягкий', 'огонь вчера веселый', 'автомобиль позавчера веселый', 'город вчера утопичный', 'лес сегодня зеленый', 'дом вчера яркий', 'автомобиль вчера зеленый', 'огонь позавчера яркий', 'огонь где-то утопичный', 'автомобиль где-то мягкий']
+
+from random import choice
+
+def getJoke(jokes,rep=False):
+    for i in range(jokes):
+        joke=[choice(words1),choice(words2),choice(words3)]
+        print(" ".join(joke))
+        if nonRep:
+            for word in words1:
+                if word in joke:
+                    words1.remove(word)
+            for word in words2:
+                if word in joke:
+                    words2.remove(word)
+            for word in words3:
+                if word in joke:
+                    words3.remove(word)
+        if not (words1 or words2 or words3):
+            return
+
+words1=["дом","мяч","дождь","пол","вечер","лес"]
+words2=["построоенный","упругий","грибной","мокрый","поздний","темный"]
+words3=["когда-то","всегда","сегодня","утром","обычно","очень"]
+jokes=int(input('Сколько нужно шуток?: '))
+nonRep=bool(input('Повторяьт шутки?\nне повторять\n'))
+getJoke(jokes,nonRep)
