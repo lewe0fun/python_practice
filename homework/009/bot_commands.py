@@ -23,7 +23,7 @@ def isWin(feild):
     return False
 
 def help(update, _):
-     update.message.reply_text("/start - для начала игры\n Можешь выбрать, кто ходит пермым лат.буквами 'x' и 'o'\nцифрами от 1 до 9 указывай куда хочешь ходить. ")
+     update.message.reply_text("/start - для начала игры\n/cancel - для отмены игры\n Можешь выбрать, кто ходит пермым лат.буквами 'x' и 'o'\nцифрами от 1 до 9 указывай куда хочешь ходить. ")
 
 
 def start(update, _):
