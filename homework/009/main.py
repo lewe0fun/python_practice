@@ -9,8 +9,8 @@ app.dispatcher.add_handler(CommandHandler('help', help))
 conv_handler = ConversationHandler(
     entry_points=[CommandHandler('start', start)],
     states={
-        NEXT: [MessageHandler(Filters.text, turn)],
-        PLAY: [MessageHandler(Filters.text, game)]
+        NEXT: [MessageHandler(Filters.text & ~Filters.command, turn)],
+        PLAY: [MessageHandler(Filters.text & ~Filters.command, game)]
     },
     fallbacks=[CommandHandler('cancel', cancel)]
 )
